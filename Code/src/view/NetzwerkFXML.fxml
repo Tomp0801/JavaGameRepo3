@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.NetzwerkFXMLController">
+   <children>
+      <BorderPane prefHeight="463.0" prefWidth="709.0">
+         <bottom>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="707.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="zurueckButton" mnemonicParsing="false" onAction="#actionButton" prefHeight="31.0" prefWidth="120.0" text="zurück" />
+                  <Button fx:id="starteSpielButton" mnemonicParsing="false" onAction="#actionButton" prefHeight="31.0" prefWidth="120.0" text="Starten" visible="false" />
+               </children>
+            </HBox>
+         </bottom>
+         <top>
+            <HBox fx:id="menuLeiste" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="25.0" minWidth="710.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="spielerName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="25.0" minWidth="260.0" text="Name" />
+                  <Button fx:id="spielErstellenButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="25.0" minWidth="150.0" mnemonicParsing="false" onAction="#actionButton" text="erstellen" />
+                  <Button fx:id="spielLadenButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="25.0" minWidth="150.0" mnemonicParsing="false" onAction="#actionButton" text="laden" />
+                  <Button fx:id="spielBeitretenButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="25.0" minWidth="150.0" mnemonicParsing="false" onAction="#actionButton" text="beitreten" />
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="350.0" prefWidth="303.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="spielBeitretenBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+                     <children>
+                        <Label fx:id="infoIPAddresse" text="Geben sie eine IP Addresse ein">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="addresseIP" prefHeight="25.0" prefWidth="332.0" text="192.168.178.111" />
+                              <Button fx:id="connect" mnemonicParsing="false" onAction="#actionButton" prefHeight="25.0" prefWidth="100.0" text="beitreten" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ScrollPane fx:id="spielerImSpielScrollPane" prefHeight="345.0" prefWidth="374.0" visible="false">
+                     <content>
+                        <VBox fx:id="spielerImSpiel" prefHeight="395.0" prefWidth="450.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </StackPane>
+         </center>
+         <right>
+            <VBox fx:id="chatBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="416.0" prefWidth="254.0" visible="false" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane fx:id="scrollPaneChat" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="3800.0" prefWidth="250.0">
+                     <content>
+                        <VBox fx:id="chat" prefHeight="271.0" prefWidth="228.0" />
+                     </content>
+                  </ScrollPane>
+                  <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0">
+                     <children>
+                        <TextField fx:id="nachricht" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="180.0" />
+                        <Button fx:id="sendeText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionButton" prefHeight="30.0" prefWidth="70.0" text="senden" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</StackPane>

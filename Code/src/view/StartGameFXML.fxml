@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<StackPane fx:id="stackPane" maxHeight="4000.0" maxWidth="4000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StartGameFXMLController">
+   <children>
+      <Canvas fx:id="hintergrund" height="234.0" width="284.0">
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </Canvas>
+      <Sphere fx:id="erdkugel">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Sphere>
+      <VBox fx:id="startMenuBox" alignment="CENTER" fillWidth="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="340.0" minWidth="630.0" scaleZ="10.0" snapToPixel="false" spacing="20.0" StackPane.alignment="CENTER">
+         <effect>
+            <Lighting diffuseConstant="1.02" specularConstant="0.0" surfaceScale="1.05">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="128.72" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Button fx:id="mehrspielerButton" alignment="CENTER" cacheShape="false" centerShape="false" mnemonicParsing="false" onAction="#actionButton" prefHeight="25.0" prefWidth="202.0" scaleShape="false" text="Mehrspieler" />
+            <Button fx:id="einzelspielerButton" mnemonicParsing="false" onAction="#actionButton" prefHeight="25.0" prefWidth="202.0" text="Einzelspieler" />
+            <Button fx:id="einstellungenButton" mnemonicParsing="false" onAction="#actionButton" prefHeight="25.0" prefWidth="205.0" text="Einstellungen" />
+            <Button fx:id="mehrButton" mnemonicParsing="false" onAction="#actionButton" prefHeight="25.0" prefWidth="208.0" text="Mehr" />
+            <Button fx:id="endeButton" mnemonicParsing="false" onAction="#actionButton" prefHeight="25.0" prefWidth="203.0" text="Ende" />
+         </children>
+         <rotationAxis>
+            <Point3D x="1.0" />
+         </rotationAxis>
+      </VBox>
+   </children>
+</StackPane>
